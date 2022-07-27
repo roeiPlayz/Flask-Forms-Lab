@@ -36,7 +36,7 @@ def home():
 @app.route('/friend_exists/<string:friend>', methods = ['GET', 'POST'])
 def friend_exists(friend):
 	facebook_friends=["Mom","Dad","Grandma", "Friend 1", "Friend 2", "Friend 3"]
-	return render_template('friend_exists.html',friends = facebook_friends)
+	return render_template('friend_exists.html',friends = facebook_friends,friend=friend)
 
 if __name__ == "__main__":  # Makes sure this is the main process
 	app.run( # Starts the site
